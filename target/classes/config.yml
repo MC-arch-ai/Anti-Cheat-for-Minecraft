@@ -1,0 +1,132 @@
+# AntiCheat Configuration
+
+# General settings
+settings:
+  prefix: '&8[&c&lAntiCheat&8]'
+  debug-mode: false
+  update-checker: true
+  
+# Punishment settings
+punishments:
+  # Available actions: kick, ban, command
+  actions:
+    kick:
+      enabled: true
+      message: '&cВы были кикнуты за использование читов: %check%'
+    ban:
+      enabled: false
+      time: 7d # Set to 'permanent' for permanent ban
+      message: '&cВы были забанены за использование читов: %check%'
+    command:
+      enabled: false
+      commands:
+        - 'broadcast &c%player% использует читы!'
+  
+  # Violation thresholds by check type
+  thresholds:
+    # Combat checks
+    killaura:
+      kick: 15
+      ban: 30
+    aimbot:
+      kick: 20
+      ban: 40
+    reach:
+      kick: 15
+      ban: 30
+    antikb:
+      kick: 20
+      ban: 35
+      
+    # Movement checks
+    speed:
+      kick: 20
+      ban: 40
+    fly:
+      kick: 15
+      ban: 30
+    nofall:
+      kick: 25
+      ban: 50
+    phase:
+      kick: 15
+      ban: 30
+      
+    # Other checks
+    timer:
+      kick: 20
+      ban: 40
+    badpackets:
+      kick: 10
+      ban: 25
+
+# Individual check settings
+checks:
+  combat:
+    killaura:
+      enabled: true
+      max-angle: 120
+      max-cps: 22
+      consistent-check: true
+    reach:
+      enabled: true
+      max-reach: 3.2
+    criticals:
+      enabled: true
+    antikb:
+      enabled: true
+      velocity-threshold: 0.8
+    
+  movement:
+    speed:
+      enabled: true
+      max-speed: 0.8
+      normalize-velocity: true   # Нормализация скорости для предотвращения глитчей
+      velocity-multiplier: 0.98  # Множитель для нормализации скорости
+    fly:
+      enabled: true
+      check-creative: false
+      oscillation-check: true    # Проверка на колебания в воздухе
+    nofall:
+      enabled: true
+      enhanced-checks: true      # Улучшенные проверки на NoFall
+      check-delayed-damage: true # Проверка на задержку урона от падения
+    jesus:
+      enabled: true
+    phase:
+      enabled: true              # Проверка на прохождение через блоки
+    
+  player:
+    fastbreak:
+      enabled: true
+    fastplace:
+      enabled: true
+      max-blocks-per-second: 14
+    nuker:
+      enabled: true
+    
+  world:
+    xray:
+      enabled: false # Resource-intensive check
+    scaffold:
+      enabled: true
+
+# Alert settings
+alerts:
+  enabled: true
+  show-details: true
+  log-to-file: true
+  webhook:
+    enabled: false
+    url: ''
+    username: 'AntiCheat'
+
+# Advanced settings
+advanced:
+  packet-analysis: false     # Включить анализ пакетов (требуется ProtocolLib)
+  normalize-movement: true   # Нормализовать движение игроков для предотвращения глитчей
+  fix-extreme-velocity: true # Исправлять экстремальные значения скорости
+  max-velocity:             # Максимальные значения скорости по осям
+    x: 4.0
+    y: 4.0
+    z: 4.0 

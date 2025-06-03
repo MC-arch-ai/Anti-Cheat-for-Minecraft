@@ -1,0 +1,42 @@
+name: AntiCheat
+version: 1.0
+main: com.anticheat.AntiCheatPlugin
+api-version: 1.20
+authors: [AntiCheatTeam]
+description: Advanced anti-cheat plugin for Minecraft servers
+commands:
+  anticheat:
+    description: Main command for AntiCheat plugin
+    aliases: [ac, anticheats]
+    permission: anticheat.admin
+    usage: |
+      /anticheat reload - Перезагрузить плагин
+      /anticheat alerts - Включить/выключить оповещения
+      /anticheat check <игрок> - Проверить нарушения игрока
+      /anticheat reset <игрок> [проверка] - Сбросить нарушения
+      /anticheat exempt <игрок> - Исключить игрока из проверок
+      /anticheat unexempt <игрок> - Вернуть игрока в проверки
+      /anticheat gui - Открыть GUI для управления режимами проверки
+      /anticheat modes [игрок] - Открыть GUI режимов проверки для игрока
+      /anticheat info - Показать информацию о плагине
+      /anticheat help - Показать справку
+permissions:
+  anticheat.admin:
+    description: Gives access to all AntiCheat commands
+    default: op
+  anticheat.alerts:
+    description: Allows to receive cheat alerts
+    default: op
+  anticheat.bypass:
+    description: Allows to bypass AntiCheat checks
+    default: op
+  anticheat.gui:
+    description: Allows to use AntiCheat GUI
+    default: op
+    children:
+      anticheat.admin: true
+  anticheat.modes:
+    description: Allows to change check modes for players
+    default: op
+    children:
+      anticheat.gui: true 

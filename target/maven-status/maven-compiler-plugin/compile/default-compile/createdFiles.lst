@@ -1,0 +1,14 @@
+com/anticheat/listeners/PlayerListener.class
+com/anticheat/utils/MovementNormalizer.class
+com/anticheat/utils/CheckModifier.class
+com/anticheat/gui/CheckModeGUI.class
+com/anticheat/gui/CheckModeGUI$CheckMode.class
+com/anticheat/listeners/CombatListener.class
+com/anticheat/utils/ViolationManager.class
+com/anticheat/listeners/MovementListener.class
+com/anticheat/commands/AntiCheatCommand.class
+com/anticheat/AntiCheatPlugin.class
+com/anticheat/utils/ConfigManager.class
+com/anticheat/gui/GUIListener.class
+com/anticheat/utils/AlertManager.class
+com/anticheat/listeners/KnockbackListener.class

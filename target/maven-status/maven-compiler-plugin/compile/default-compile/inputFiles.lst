@@ -1,0 +1,13 @@
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/AntiCheatPlugin.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/commands/AntiCheatCommand.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/gui/CheckModeGUI.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/gui/GUIListener.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/listeners/CombatListener.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/listeners/KnockbackListener.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/listeners/MovementListener.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/listeners/PlayerListener.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/utils/AlertManager.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/utils/CheckModifier.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/utils/ConfigManager.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/utils/MovementNormalizer.java
+/home/dmitr/AntiCheat/src/main/java/com/anticheat/utils/ViolationManager.java
